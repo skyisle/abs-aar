@@ -1,14 +1,26 @@
-Usage
+Requirements
 -----
-BE CAREFUL. 
-This aar has dependency with 'com.android.support:support-v4:13.0.0' instead of 'com.google.android:support-v4:r7' for personal purpose.
+* ensure to use the latest Android SDK Build Tools available (18 as this readme being written). 
+* install Android Support Repository
+* install Google Repository
+
+If you're using support library use latest available version. It's easy:
+
+    dependencies {
+        compile 'com.android.support:support-v4:+'
+    }
+
+
+Example
+-----
+Here's a simple example of `build.gradle` with actionbarsherlock included:
 
     buildscript {
         repositories {
             mavenCentral()
         }
         dependencies {
-            classpath 'com.android.tools.build:gradle:0.4.2'
+            classpath 'com.android.tools.build:gradle:0.5+'
         }
     }
     
@@ -17,12 +29,10 @@ This aar has dependency with 'com.android.support:support-v4:13.0.0' instead of 
     repositories {
         mavenCentral()
             maven {
-                url "https://github.com/skyisle/mvn-repo/raw/master"
+                url "https://github.com/skyisle/abs-aar/raw/master"
             }
     }
     
     dependencies {
-        compile 'com.actionbarsherlock:actionbarsherlock:4.3.2-SNAPSHOT'
+        compile 'com.actionbarsherlock:actionbarsherlock:4.3.2-SNAPSHOT@aar'
     }
-
-
